@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2B7CA6521D9E89AF00EAFC77"
-               BuildableName = "test.app"
-               BlueprintName = "test"
-               ReferencedContainer = "container:test.xcodeproj">
+               BuildableName = "FriendsList.app"
+               BlueprintName = "FriendsList"
+               ReferencedContainer = "container:FriendsList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2B7CA66E1D9E89B000EAFC77"
-               BuildableName = "testTests.xctest"
-               BlueprintName = "testTests"
-               ReferencedContainer = "container:test.xcodeproj">
+               BuildableName = "FriendsList.xctest"
+               BlueprintName = "FriendsListTests"
+               ReferencedContainer = "container:FriendsList.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2B7CA6791D9E89B000EAFC77"
-               BuildableName = "testUITests.xctest"
-               BlueprintName = "testUITests"
-               ReferencedContainer = "container:test.xcodeproj">
+               BuildableName = "FriendsList.xctest"
+               BlueprintName = "FriendsListUITests"
+               ReferencedContainer = "container:FriendsList.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B7CA6521D9E89AF00EAFC77"
-            BuildableName = "test.app"
-            BlueprintName = "test"
-            ReferencedContainer = "container:test.xcodeproj">
+            BuildableName = "FriendsList.app"
+            BlueprintName = "FriendsList"
+            ReferencedContainer = "container:FriendsList.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B7CA6521D9E89AF00EAFC77"
-            BuildableName = "test.app"
-            BlueprintName = "test"
-            ReferencedContainer = "container:test.xcodeproj">
+            BuildableName = "FriendsList.app"
+            BlueprintName = "FriendsList"
+            ReferencedContainer = "container:FriendsList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B7CA6521D9E89AF00EAFC77"
-            BuildableName = "test.app"
-            BlueprintName = "test"
-            ReferencedContainer = "container:test.xcodeproj">
+            BuildableName = "FriendsList.app"
+            BlueprintName = "FriendsList"
+            ReferencedContainer = "container:FriendsList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
