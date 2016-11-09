@@ -1,8 +1,8 @@
 //
-//  ViewController.h
-//  test
+//  BViewController.h
+//  FriendsList
 //
-//  Created by mac1 on 16/9/30.
+//  Created by mac1 on 16/10/2.
 //  Copyright © 2016年 Tucici. All rights reserved.
 //
 
@@ -12,6 +12,8 @@
 //    InviteTypeGroup,
 //    InviteTypeVchat
 //}InviteType;
-@interface ViewController : UIViewController
+@interface BViewController : UIViewController
 //@property (nonatomic, assign) InviteType type;
+
+
 @end

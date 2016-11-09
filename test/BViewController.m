@@ -1,16 +1,16 @@
 //
-//  ViewController.m
-//  test
+//  BViewController.m
+//  FriendsList
 //
-//  Created by mac1 on 16/9/30.
+//  Created by mac1 on 16/10/2.
 //  Copyright © 2016年 Tucici. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BViewController.h"
 #import "search.h"
 #import "FriendsList.h"
 #import "FriendCell.h"
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,UISearchBarDelegate>
+@interface BViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,UISearchBarDelegate>
 @property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, assign) int number;                       /**/
 @property (nonatomic, strong) FriendsList *friendsList; /*已经选中的好友列表*/
@@ -20,7 +20,7 @@
 @property (nonatomic, assign) BOOL selected;
 @end
 
-@implementation ViewController
+@implementation BViewController
 -(void)viewWillAppear:(BOOL)animated{
     
 }
@@ -158,10 +158,10 @@
         cell = [[FriendCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     }
     else{
-//        while (![cell.detailTextLabel.text isEqualToString:@""] && cell.isEditing == YES) {
-//        cell.detailTextLabel.text = @"";
-//            [cell changeSelectState];    //删除并进行重新分配
-//        }
+        while (![cell.detailTextLabel.text isEqualToString:@""] && cell.isEditing == YES) {
+            
+            [cell changeSelectState];    //删除并进行重新分配
+        }
     }
     if ([_friendsList.visibleArray count] && ![_searchview.text isEqualToString:@""]) {
         for (int i = 0; i <= _friendsList.visibleArray.count; i++) {
@@ -199,20 +199,21 @@
     FriendCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     NSLog(@"isediting   ~~~~~  %d   ~~~~~~~ %ld",cell.isEditing, (long)indexPath.row);
-  
+    
     [cell changeSelectState];
+    
     [_friendsList addNewObject:cell.textLabel.text toArray:_friendsList.selectedArray];
     
-    if (_number != (int)indexPath.row && _number != 10000) {
-        
-        NSIndexPath *path =[NSIndexPath indexPathForRow:_number inSection:0];
-        FriendCell *cell = [tableView cellForRowAtIndexPath:path];
-     
-        [cell clear];
-        NSLog(@"_number    %d    %@      " ,_number,cell.textLabel.text);
-        [_friendsList removeOldObjectfromArray:_friendsList.selectedArray];
-    }
-    self.number = (int)indexPath.row;
+//    if (_number != (int)indexPath.row && _number != 10000) {
+    
+//        NSIndexPath *path =[NSIndexPath indexPathForRow:_number inSection:0];
+//        FriendCell *cell = [tableView cellForRowAtIndexPath:path];
+//        
+//        [cell changeSelectState];
+//        NSLog(@"_number    %d    %@      " ,_number,cell.textLabel.text);
+//        [_friendsList removeOldObjectfromArray:_friendsList.selectedArray];
+//    }
+//    self.number = (int)indexPath.row;
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     NSLog(@"  >>>>  %lu  %@",(unsigned long)_friendsList.selectedArray.count , _friendsList.selectedArray);
@@ -225,7 +226,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
  #pragma mark - Navigation
  

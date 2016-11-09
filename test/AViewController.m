@@ -7,6 +7,7 @@
 //
 
 #import "AViewController.h"
+#import "BViewController.h"
 #import "ViewController.h"
 @interface AViewController ()
 
@@ -18,18 +19,31 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 60)];
-    [button setTitle:@"click" forState:UIControlStateNormal];
-    [button setBackgroundColor:[UIColor purpleColor]];
-    [button addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(10, 100, 100, 60)];
+    [button setTitle:@"Vchat" forState:UIControlStateNormal];
+   [button setBackgroundColor:[UIColor purpleColor]];
+    [button addTarget:self action:@selector(Vchat:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
+    
+    UIButton *button2  = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 110.0, 100, 100, 60)];
+    [button2 setTitle:@"Group" forState:UIControlStateNormal];
+    [button2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button2 setBackgroundColor:[UIColor yellowColor]];
+    [button2 addTarget:self action:@selector(Group:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button2];
     // Do any additional setup after loading the view.
 }
--(void)click:(UIButton *)sender{
+-(void)Vchat:(UIButton *)sender{
     ViewController *avc = [[ViewController alloc]init];
+//    avc.type = InviteTypeVchat;
     [self presentViewController:avc animated:NO completion:nil];
     
     
+}
+-(void)Group:(UIButton *)sender{
+BViewController *bvc= [[BViewController  alloc]init];
+    [self presentViewController:bvc animated:NO completion:nil];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
